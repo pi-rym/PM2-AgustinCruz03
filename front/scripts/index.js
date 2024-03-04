@@ -1,6 +1,9 @@
-const sectionPeliculas = document.getElementById('sectionPeliculas')
+$.get("https://students-api.2.us-1.fl0.io/movies",(data, status)=>{
+    mapearArray(data);
+})
 
-function createTarget({title, year, director, duration, genre, rate, poster}){
+
+const createTarget = ({title, year, director, duration, genre, rate, poster}) => {
     //creo la tarjeta
     const target = document.createElement("div")
 
@@ -32,7 +35,10 @@ function createTarget({title, year, director, duration, genre, rate, poster}){
 
     return target;
 }
+const mapearArray = (tempData) =>{
+    const sectionPeliculas = document.getElementById('sectionPeliculas')
 
-const targetas = tempData.map(createTarget)
+    const targetas = tempData.map(createTarget)
 
-targetas.forEach(target => sectionPeliculas.appendChild(target))
+    targetas.forEach(target => sectionPeliculas.appendChild(target))
+}
