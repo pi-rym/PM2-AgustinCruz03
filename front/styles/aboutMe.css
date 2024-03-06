@@ -18,6 +18,8 @@ body{
 .fotoCurriculum{
     width: 100%;
     height: 250px;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 .backgroundAside{
     background-color: var(--color-aside);
