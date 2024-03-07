@@ -19,9 +19,10 @@ body{
     margin-top: 11vh;
 }
 #tituloPrincipal{
-    font-size: 4em;
-    font-family: "Lato", sans-serif;
-    background-color: #D9D9D9;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
 }
 
 

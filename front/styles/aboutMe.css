@@ -1,7 +1,6 @@
 :root{
     --color-subtitles: #242833;
     --color-aside: #363C48;
-
 }
 
 body{
@@ -17,6 +16,12 @@ body{
 }
 .main{
     margin-top: 11vh;
+}
+.tituloPrincipal{
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
 }
 .fotoCurriculum{
     width: 100%;
