@@ -7,65 +7,19 @@ body{
     box-sizing: border-box;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    width: 70vw;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #353535;
-    flex-wrap: wrap;
-    margin-inline: 14.5vw;
-}
-
-
 .logoPagina{
     width: 100px;
 }
 
-#paginas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-#paginas li{
+.nav-item{
     background-color: #D9D9D9;
-    padding: 8px;
-    border: 1px solid #fff;
 }
-
-#paginas li a {
-    text-decoration: none;
-    color: #353535;
-    font-weight: 700;
-}
-
-#paginas li:hover{
-    transform: scale(1.1);
-}
-
 
 #tituloPrincipal{
-    font-size: 8em;
+    font-size: 4em;
     font-family: "Lato", sans-serif;
-    text-align: center;
-    color: #fff;
-    font-weight: 900;
-    animation: cambioColor 5s infinite;
-    width: 70vw;
-    margin: 15vh auto 5vh auto;
-    padding-block: 10px;
+    background-color: #D9D9D9;
 }
-@keyframes cambioColor {
-    0% { background-color: #D9D9D9; color: white; } 
-    50% { background-color: #D9D9D9; color: black; } 
-    100% { background-color: #D9D9D9; color: white; } 
-  }
 
 
 .tecnologias{
@@ -83,7 +37,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 300px;
-    height: 400px;
+    height: 450px;
     background-color: #003049;
     padding: 10px;
     color: #FDF0D5;
