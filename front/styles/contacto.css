@@ -6,15 +6,15 @@ body{
     height: 100vh;
 }
 
-.formWrap{
-    margin-top: 20vh;
-}
 .logoPagina{
     width: 100px;
 }
 
 .nav-item{
     background-color: #D9D9D9;
+}
+main{
+    margin-top: 12vh;
 }
 #tituloPrincipal{
     font-family: "Bebas Neue", sans-serif;
