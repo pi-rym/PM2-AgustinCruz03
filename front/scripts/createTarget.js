@@ -1,12 +1,4 @@
-const createTarget = ({
-    title,
-    year,
-    director,
-    duration,
-    genre,
-    rate,
-    poster,
-  }) => {
+const createTarget = ({title, year, director, duration, genre, rate, poster}) => {
     //creo la tarjeta
     const target = document.createElement("div");
   

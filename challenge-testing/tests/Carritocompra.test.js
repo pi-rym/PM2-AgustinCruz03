@@ -6,6 +6,10 @@ const { CarritoCompra } = require("../index")
 // calcularTotal(): Calcula el total de la compra sumando los precios de todos los productos en el carrito.
 
 // aplicarDescuento(porcentaje): Aplica un descuento al total de la compra según el porcentaje especificado
+
+
+const mockAgregarProducto = CarritoCompra.prototype.agregarProducto
+// console.log(mockAgregarProducto.mocks.call)
 describe("la clase CarritoCompra debe...", () => {
     //acerca de constructor
     it("tener una clase constructor", () => {
@@ -18,10 +22,7 @@ describe("la clase CarritoCompra debe...", () => {
     });
     //funcion agregarProducto()
     it("tener una funcion agregarProducto()",() => {
-        // const carritoNuevo = new CarritoCompra()
-        // carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
-        // expect(carritoNuevo.products).toEqual([{nameProducto:"yogur", precio:200}]);
-        expect(CarritoCompra.prototype.agregarProducto).toBeDefined();
+        expect(mockAgregarProducto).toBeDefined();
     })
 
     it("recibir un objeto representando un producto y lo agrega al carrito con la funcion agregarProducto()", () => {
