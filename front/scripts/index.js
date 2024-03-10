@@ -23,6 +23,7 @@ const traerInformacion = async () => {
   try {
     //intentamos traer la información sin errores
   const promesa = await axios.get("https://students-api.2.us-1.fl0.io/movies")
+//   //IMPORTANTE: si todo sale bien la promesa tiene dentro una propiedad "data" con la información en este caso el array de pelis
     promesa.data.forEach(createTarget)
   }
   catch(err){
