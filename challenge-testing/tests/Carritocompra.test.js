@@ -7,17 +7,23 @@ const { CarritoCompra } = require("../index")
 
 // aplicarDescuento(porcentaje): Aplica un descuento al total de la compra según el porcentaje especificado
 
+//CarritoCompra debe ser una clase
 
 const mockAgregarProducto = CarritoCompra.prototype.agregarProducto
 // console.log(mockAgregarProducto.mocks.call)
 describe("la clase CarritoCompra debe...", () => {
+
+    let carritoNuevo;
+    beforeEach(() => {
+        carritoNuevo = new CarritoCompra()
+    })
+
     //acerca de constructor
-    it("tener una clase constructor", () => {
+    it("CarritoCOmpra debe ser una clase", () => {
         expect(typeof CarritoCompra.prototype.constructor).toEqual("function")
     });
 
     it("inicializar el carrito con un array vacío", () => {
-        const carritoNuevo = new CarritoCompra()
         expect(carritoNuevo.products).toEqual([])
     });
     //funcion agregarProducto()
@@ -26,13 +32,11 @@ describe("la clase CarritoCompra debe...", () => {
     })
 
     it("recibir un objeto representando un producto y lo agrega al carrito con la funcion agregarProducto()", () => {
-        const carritoNuevo = new CarritoCompra()
         carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
         expect(typeof carritoNuevo.products[0]).toEqual("object")
     })
 
     it("solo poder recibir objetos para agregarlos al carrito", () => {
-        const carritoNuevo = new CarritoCompra()
         expect(() => carritoNuevo.agregarProducto("hola")).toThrowError("no esta ingresando un objeto")
         expect(() => carritoNuevo.agregarProducto(9).toThrowError("no esta ingresando un objeto"))
     })
@@ -43,7 +47,6 @@ describe("la clase CarritoCompra debe...", () => {
     })
 
     it("calcular el total de la compra sumando los precios del carrito, usando la funcion calcularTotal()", () => {
-        const carritoNuevo = new CarritoCompra()
         carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
         carritoNuevo.agregarProducto({nameProducto:"leche", precio:100})
         carritoNuevo.agregarProducto({nameProducto:"carne", precio:300})
@@ -52,7 +55,6 @@ describe("la clase CarritoCompra debe...", () => {
 
     //aplicarDescuento(Porcentje)
     it("aplicar un descuento al total de la compra, utilizando la funcion aplicarDescuento(porcentaje)", () => {
-        const carritoNuevo = new CarritoCompra()
         carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
         carritoNuevo.agregarProducto({nameProducto:"leche", precio:100})
         carritoNuevo.agregarProducto({nameProducto:"carne", precio:300})
