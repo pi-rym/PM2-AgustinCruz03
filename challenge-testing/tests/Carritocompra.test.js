@@ -32,7 +32,7 @@ describe("la clase CarritoCompra debe...", () => {
     })
 
     it("recibir un objeto representando un producto y lo agrega al carrito con la funcion agregarProducto()", () => {
-        carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
+        carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200, cantidad:2})
         expect(typeof carritoNuevo.products[0]).toEqual("object")
     })
 
@@ -47,18 +47,18 @@ describe("la clase CarritoCompra debe...", () => {
     })
 
     it("calcular el total de la compra sumando los precios del carrito, usando la funcion calcularTotal()", () => {
-        carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
-        carritoNuevo.agregarProducto({nameProducto:"leche", precio:100})
-        carritoNuevo.agregarProducto({nameProducto:"carne", precio:300})
-        expect(carritoNuevo.calcularTotal()).toEqual(600);
+        carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200, cantidad:2})
+        carritoNuevo.agregarProducto({nameProducto:"leche", precio:100, cantidad:3})
+        carritoNuevo.agregarProducto({nameProducto:"carne", precio:300, cantidad:2})
+        expect(carritoNuevo.calcularTotal()).toEqual(1300);
     })
 
     //aplicarDescuento(Porcentje)
     it("aplicar un descuento al total de la compra, utilizando la funcion aplicarDescuento(porcentaje)", () => {
-        carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200})
-        carritoNuevo.agregarProducto({nameProducto:"leche", precio:100})
-        carritoNuevo.agregarProducto({nameProducto:"carne", precio:300})
+        carritoNuevo.agregarProducto({nameProducto:"yogur", precio:200, cantidad:2})
+        carritoNuevo.agregarProducto({nameProducto:"leche", precio:100, cantidad:3})
+        carritoNuevo.agregarProducto({nameProducto:"carne", precio:300, cantidad:2})
         carritoNuevo.aplicarDescuento(10)
-        expect(carritoNuevo.calcularTotal()).toEqual(540);
+        expect(carritoNuevo.calcularTotal()).toEqual(1170);
     })
 })

@@ -14,7 +14,7 @@ class CarritoCompra{
     calcularTotal(){
         let total = 0;
         for(let product of this.products){
-            total += product.precio
+            total += (product.precio * product.cantidad)
         }
         total = total - total * (this.descuento /100)
         return total;
