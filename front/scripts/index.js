@@ -21,7 +21,7 @@ const axios = require("axios")
 const traerInformacion = async () => {
   try {
     //intentamos traer la información sin errores
-  const promesa = await axios.get("https://students-api.up.railway.app/movies") //esta funcion espera a ser resuelta, como que ya no es tan asincronica no?
+  const promesa = await axios.get("http://localhost:3000/movies") //esta funcion espera a ser resuelta, como que ya no es tan asincronica no?
 //IMPORTANTE: si todo sale bien la promesa tiene dentro una propiedad "data" con la información en este caso el array de pelis
     promesa.data.forEach(createTarget)
   }
