@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Contacto</title>
-        <link rel="stylesheet" href="../styles/reset.css" />
-        <link rel="stylesheet" href="../styles/contacto.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/agregarPelicula.css" />
         <!-- fuentes -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
           integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
           crossorigin="anonymous"
         ></script>
-      </head>
+</head>
 <body>
     <header class="container p-2 d-flex justify-content-around align-items-center bg-dark ">
         <img
@@ -77,21 +77,47 @@
           </li>
         </ul>
       </header>
+      <main class="container">
+        <h1 id="tituloPrincipal" class="text-center text-light fs-1 my-4">Agregar Pelicula</h1>
 
-      <main class="row">
-        <h1 id="tituloPrincipal" class="text-center text-light my-3 fs-1">Contacto</h1>
-        <form class="text-light p-2 col-md-6 col-sm-12">
-          <fieldset class="d-flex flex-column justify-content-around align-items-start p-1">
-            <legend class="fs-3 text-center">Formulario de contacto</legend>
-            <label for="NombreForm">Nombre:</label>
-            <input type="text" id="NombreForm" name="NombreForm" placeholder="Ingrese su nombre" required>
-            <label for="EmailForm">Email:</label>
-            <input type="text" id="EmailForm" name="EmailForm" placeholder="Ingrese su email" required>
-            <label for="MensajeForm">Mensaje:</label>
-            <textarea name="MensajeForm" id="MensajeForm" cols="30" rows="3" placeholder="Ingrese mensaje" required></textarea>
-            <button type="submit" class="my-3 btn btn-primary">Enviar</button>
-          </fieldset>
-        </form>
+        <form class="row g-3 pb-3 bg-light-subtle">
+            <div class="col-md-6">
+              <label for="inputTitulo" class="form-label">Titulo de Pelicula</label>
+              <input type="text" class="form-control border border-black" id="inputTitulo">
+            </div>
+            <div class="col-md-6">
+              <label for="inputAnio" class="form-label">Año de Estreno</label>
+              <input type="number" class="form-control border border-black" id="inputAnio">
+            </div>
+            <div class="col-6">
+              <label for="inputDirector" class="form-label">Director</label>
+              <input type="text" class="form-control border border-black" id="inputDirector">
+            </div>
+            <div class="col-6">
+              <label for="inputDuracion" class="form-label">Duración de Pelicula</label>
+              <input type="text" class="form-control border border-black" id="inputDuracion">
+            </div>
+            <div class="col-md-6">
+              <label for="inputGenero" class="form-label">Género/s</label>
+              <input type="text" class="form-control border border-black" id="inputGenero">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCalificacion" class="form-label">Calificación</label>
+              <input type="text" class="form-control border border-black" id="inputCalificacion">
+            </div>
+            <div class="col-md-12">
+              <label for="inputPoster" class="form-label">Url de Poster</label>
+              <input type="text" class="form-control border border-black" id="inputPoster">
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+              <button type="button" class="btn btn-primary botonesFormulario" id="btnSubir">Subir Pelicula</button>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <button type="button" class="btn btn-danger botonesFormulario" id="btnLimpiar">Limpiar Formulario</button>
+              </div>
+          </form>
       </main>
+
+      <script src="../scripts/agregarPelicula.js"></script>
 </body>
 </html>
