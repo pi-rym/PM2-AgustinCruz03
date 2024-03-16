@@ -1,15 +1,9 @@
-
 const limpiarHandler = () => {
     const inputs = document.getElementsByTagName("input")
     for (let input of inputs) {
         input.value = "";
     }
 } 
-
-const btnLimpiar = document.getElementById("btnLimpiar")
-btnLimpiar.addEventListener("click", limpiarHandler)
-
-
 
 const submitHandler = () => {
     const inputs = document.getElementsByTagName("input")
@@ -21,6 +15,9 @@ const submitHandler = () => {
     alert("Formulario enviado")
 }
 
-const btnSubir = document.getElementById("btnSubir")
+const btnLimpiar = document.getElementById("btnLimpiar")
+btnLimpiar.addEventListener("click", limpiarHandler)
 
+
+const btnSubir = document.getElementById("btnSubir")
 btnSubir.addEventListener("click", submitHandler)
