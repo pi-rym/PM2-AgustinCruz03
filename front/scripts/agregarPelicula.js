@@ -16,18 +16,19 @@ const submitHandler = () => {
     }
     
     submitMovie()
+
 }
 
 const submitMovie = async () => {
     try {
         const title = document.getElementById("inputTitulo").value
-    const year = document.getElementById("inputAnio").value
-    const director = document.getElementById("inputDirector").value
-    const duration = document.getElementById("inputDuracion").value
-    let genre = document.getElementById("inputGenero").value
-    genre = genre.split(",")
-    const rate = document.getElementById("inputCalificacion").value
-    const poster = document.getElementById("inputPoster").value
+        const year = document.getElementById("inputAnio").value
+        const director = document.getElementById("inputDirector").value
+        const duration = document.getElementById("inputDuracion").value
+        let genre = document.getElementById("inputGenero").value
+        genre = genre.split(",")
+        const rate = document.getElementById("inputCalificacion").value
+        const poster = document.getElementById("inputPoster").value
 
     await axios.post("http://localhost:3000/movies", {
       title,
