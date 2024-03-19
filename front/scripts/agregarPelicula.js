@@ -14,9 +14,9 @@ const submitHandler = () => {
             return alert("no se pudo enviar el formulario, hay campos vacios")
         }
     }
-    
     submitMovie()
-
+    limpiarHandler()
+    alert("Pelicula subida correctamente")
 }
 
 const submitMovie = async () => {
