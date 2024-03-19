@@ -18,6 +18,12 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+}
 
 .botonesFormulario{
     width: 100%;
