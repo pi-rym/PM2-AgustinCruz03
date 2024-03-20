@@ -15,8 +15,7 @@ const submitHandler = () => {
         }
     }
     submitMovie()
-    limpiarHandler()
-    alert("Pelicula subida correctamente")
+    alert("Pelicula subida correctamente, puedes verla en la seccion 'Home'")
 }
 
 const submitMovie = async () => {
